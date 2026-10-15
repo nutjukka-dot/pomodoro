@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E8E7E3"/>
+    </linearGradient>
+    <linearGradient id="sageGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#91AEA3"/>
+      <stop offset="100%" stop-color="#6F8D81"/>
+    </linearGradient>
+    <filter id="tactileShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="4" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <!-- Background squircle -->
+  <rect width="512" height="512" rx="128" fill="#E8E7E3"/>
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg)" filter="url(#tactileShadow)"/>
+  
+  <!-- Outer Focus Ring -->
+  <circle cx="256" cy="270" r="140" fill="none" stroke="#E2ECE7" stroke-width="24" stroke-linecap="round"/>
+  <!-- Focus Progress Arc -->
+  <circle cx="256" cy="270" r="140" fill="none" stroke="url(#sageGrad)" stroke-width="24" stroke-linecap="round" stroke-dasharray="879" stroke-dashoffset="220" transform="rotate(-90 256 270)"/>
+
+  <!-- Center Tactile Button -->
+  <circle cx="256" cy="270" r="100" fill="url(#bg)" filter="url(#tactileShadow)"/>
+
+  <!-- Tomato Leaf / Stem Accent -->
+  <path d="M 256 125 C 256 100, 275 80, 295 75 C 290 95, 275 115, 256 125 Z" fill="#7C9A8E"/>
+  <path d="M 256 125 C 256 95, 235 80, 215 78 C 225 100, 240 118, 256 125 Z" fill="#584B79"/>
+  <rect x="251" y="115" width="10" height="25" rx="5" fill="#2D3A34"/>
+
+  <!-- Clock Hands / Play Glyph in Sage Dark -->
+  <circle cx="256" cy="270" r="12" fill="#2D3A34"/>
+  <line x1="256" y1="270" x2="256" y2="210" stroke="#2D3A34" stroke-width="12" stroke-linecap="round"/>
+  <line x1="256" y1="270" x2="300" y2="270" stroke="#584B79" stroke-width="10" stroke-linecap="round"/>
+</svg>

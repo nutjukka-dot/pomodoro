@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --canvas: #E8E7E3;
+    --card: #F5F4F0;
+    --sage-base: #7C9A8E;
+    --sage-dark: #2D3A34;
+    --sage-light: #E2ECE7;
+    --lavender-soft: #DCD7EC;
+    --lavender-dark: #584B79;
+    --text-primary: #1C221F;
+    --text-muted: #5E6762;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--canvas);
+    color: var(--text-primary);
+  }
+}
+
+/* Tactile Soft-UI Shadows & Surfaces (Human-crafted 135deg lighting) */
+.tactile-convex {
+  background: linear-gradient(145deg, #FFFFFF, #EBEAE5);
+  box-shadow: 
+    -3px -3px 8px 0px rgba(255, 255, 255, 0.85),
+    4px 4px 12px 0px rgba(0, 0, 0, 0.08);
+}
+
+.tactile-card {
+  background: #F5F4F0;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    -4px -4px 12px 0px rgba(255, 255, 255, 0.80),
+    4px 6px 16px 0px rgba(0, 0, 0, 0.07);
+}
+
+.tactile-concave {
+  background: #E2E1DC;
+  box-shadow: 
+    inset 3px 3px 6px 0px rgba(0, 0, 0, 0.08),
+    inset -3px -3px 6px 0px rgba(255, 255, 255, 0.90);
+}
+
+.tactile-btn {
+  background: linear-gradient(145deg, #FFFFFF, #EBEAE5);
+  box-shadow: 
+    -3px -3px 7px 0px rgba(255, 255, 255, 0.90),
+    3px 3px 8px 0px rgba(0, 0, 0, 0.09);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tactile-btn:hover {
+  background: linear-gradient(145deg, #FFFFFF, #F0EFEA);
+  box-shadow: 
+    -4px -4px 9px 0px rgba(255, 255, 255, 0.95),
+    4px 4px 10px 0px rgba(0, 0, 0, 0.11);
+}
+
+.tactile-btn:active,
+.tactile-btn-pressed {
+  box-shadow: 
+    inset 2px 2px 4px 0px rgba(0, 0, 0, 0.12),
+    inset -2px -2px 4px 0px rgba(255, 255, 255, 0.70) !important;
+  transform: translateY(1px);
+}
+
+/* Primary Sage Button */
+.tactile-btn-sage {
+  background: linear-gradient(145deg, #87A599, #729084);
+  box-shadow: 
+    -3px -3px 8px 0px rgba(255, 255, 255, 0.65),
+    4px 4px 12px 0px rgba(45, 58, 52, 0.22);
+  color: #FFFFFF;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tactile-btn-sage:hover {
+  background: linear-gradient(145deg, #8FADA1, #69877B);
+  box-shadow: 
+    -4px -4px 10px 0px rgba(255, 255, 255, 0.75),
+    5px 5px 14px 0px rgba(45, 58, 52, 0.26);
+}
+
+.tactile-btn-sage:active {
+  box-shadow: 
+    inset 3px 3px 6px 0px rgba(28, 34, 31, 0.35),
+    inset -2px -2px 5px 0px rgba(255, 255, 255, 0.25) !important;
+  transform: translateY(1px);
+}
+
+/* Accent Lavender Button */
+.tactile-btn-lavender {
+  background: linear-gradient(145deg, #E6E1F4, #D5CFE6);
+  box-shadow: 
+    -3px -3px 8px 0px rgba(255, 255, 255, 0.8),
+    4px 4px 12px 0px rgba(88, 75, 121, 0.18);
+  color: #584B79;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tactile-btn-lavender:hover {
+  background: linear-gradient(145deg, #ECE8F7, #CBC4DD);
+}
+
+.tactile-btn-lavender:active {
+  box-shadow: 
+    inset 2px 2px 5px 0px rgba(88, 75, 121, 0.25),
+    inset -2px -2px 5px 0px rgba(255, 255, 255, 0.6) !important;
+  transform: translateY(1px);
+}
+
+/* Custom Range Slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #E2E1DC;
+  border-radius: 9999px;
+  height: 8px;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1), inset -1px -1px 3px rgba(255, 255, 255, 0.8);
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #FFFFFF, #EBEAE5);
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.9), 2px 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(0.95);
+  background: #7C9A8E;
+}
